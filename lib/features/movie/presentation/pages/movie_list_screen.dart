@@ -26,7 +26,7 @@ class MovieListScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {
-              // TODO: Navigate to search screen
+              Navigator.pushNamed(context, '/movie_search');
             },
           ),
         ],
@@ -212,7 +212,7 @@ class MovieCard extends StatelessWidget {
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        '${movie.voteAverage.toStringAsFixed(1)}',
+                        movie.voteAverage.toStringAsFixed(1),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 12,

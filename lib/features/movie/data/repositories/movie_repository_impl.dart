@@ -22,6 +22,7 @@ class MovieRepositoryImpl implements MovieRepository {
     }
   }
 
+  @override
   Future<Either<Failure, MovieDetail>> getMovieDetails(int movieId) async {
     try {
       final movieDetail = await remoteDataSource.getMovieDetails(movieId);
@@ -41,6 +42,7 @@ class MovieRepositoryImpl implements MovieRepository {
     }
   }
 
+  @override
   Future<Either<Failure, List<Movie>>> searchMovies(String query) async {
     try {
       final movies = await remoteDataSource.searchMovies(query);
