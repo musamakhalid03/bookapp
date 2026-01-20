@@ -4,7 +4,7 @@ import 'package:com_test_testapp/features/movie/presentation/bloc/movie_detail_s
 import 'package:com_test_testapp/features/movie/presentation/pages/seat_selection_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:youtube_plyr_iframe/youtube_plyr_iframe.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class MovieDetailScreen extends StatefulWidget {
   final int movieId;
@@ -29,11 +29,11 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
 
   void _playTrailer(String youtubeKey) {
     _youtubeController = YoutubePlayerController(
-      initialVideoId: youtubeKey,
+      // videoId: youtubeKey,
       params: const YoutubePlayerParams(
         showControls: true,
-        showFullscreenButton: true,
-        autoPlay: true,
+        // showFullscreenButton: traue,
+        // autoPlay: true,
       ),
     );
 
@@ -43,7 +43,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   }
 
   void _closeTrailer() {
-    _youtubeController?.pause();
+    _youtubeController?.pauseVideo();
     setState(() {
       _isTrailerPlaying = false;
       _youtubeController = null;
@@ -67,10 +67,10 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               backgroundColor: Colors.black,
               body: SafeArea(
                 child: Center(
-                  child: YoutubePlayerIFrame(
-          controller: _youtubeController!,
-          aspectRatio: 16 / 9,
-        ),
+                  // child: YoutubePlayerIFrame(
+                  //   controller: _youtubeController!,
+                  //   aspectRatio: 16 / 9,
+                  // ),
                 ),
               ),
               floatingActionButton: FloatingActionButton(
