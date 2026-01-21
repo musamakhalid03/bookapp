@@ -1,10 +1,7 @@
 class AppConstants {
   static const String appName = 'Movie Booking';
-  
-  // ✅ YOUR ACTUAL API KEY - Use this one!
   static const String tmdbApiKey = '670a10aa3f16f4d1cd07ab2188f7767f';
-  
-  // Optional: You can also use the access token for Bearer auth
+
   static const String tmdbAccessToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NzBhMTBhYTNmMTZmNGQxY2QwN2FiMjE4OGY3NzY3ZiIsIm5iZiI6MTc2ODk0MTQyMi4xMDIwMDAyLCJzdWIiOiI2OTZmZTc2ZWI1NDg5MjQ4NzRmZTE0NjAiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.d7VKJ1BOXfLsVlq9LJB_abQ9UJlE36Cfv4loMra9TMw';
   
   static const String tmdbBaseUrl = 'https://api.themoviedb.org/3';
