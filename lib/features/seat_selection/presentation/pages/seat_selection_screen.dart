@@ -34,7 +34,6 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
 
   void _calculateResponsiveValues() {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
     
     if (screenWidth < 600) {
 
@@ -100,7 +99,6 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
 
   Widget _seatGrid() {
     final screenWidth = MediaQuery.of(context).size.width;
-    final isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     
     return Column(
       children: [
@@ -173,7 +171,7 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
                   }
                   
                   return seatExists ? _seat(seatId) : const SizedBox.shrink();
-                }).where((widget) => widget is! SizedBox || (widget as SizedBox).width != null),
+                }).where((widget) => widget is! SizedBox || (widget).width != null),
               ],
             ),
           );

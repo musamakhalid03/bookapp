@@ -182,7 +182,6 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   Widget _buildMovieDetail(BuildContext context, MovieDetailLoaded state) {
     final movie = state.movieDetail;
     final videos = state.videos;
-    final screenWidth = MediaQuery.of(context).size.width;
 
     return CustomScrollView(
       physics: const BouncingScrollPhysics(),
